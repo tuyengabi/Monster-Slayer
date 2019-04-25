@@ -1,5 +1,7 @@
 # Monster-Slayer
 
+![https://www.github.com/tuyengabi](./img/monster-slayer-02.png)
+
 **Critères qualité**
 ------------------
 * Vue JS only => Zéro manipulation native DOM !!!
