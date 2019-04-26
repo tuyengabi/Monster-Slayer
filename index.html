@@ -1,34 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title></title>
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-</head>
-<body>
-  <main class="game">
-  <section class="competitor">
-    <div class="player">
-      <p>MONSTER</p>
-      <div class="lifeBar"></div>
-    </div>
-    <div class="player">
-      <p>YOU</p>
-      <div class="lifeBar"></div>
-    </div>
-  </section>
-  <section>
-    <div class="startGame"><button class="newGame"></button></div>
-    <div class="playGame">
-      <button></button>
-      <button></button>
-      <button></button>
-      <button></button>
-    </div>
-  </section>
-  </main>
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js" charset="utf-8"></script>
-  <script src="js/main.js" charset="utf-8"></script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+  </head>
+  <body>
+    <main class="game">
+    <section class="competitor">
+      <attack></attack>
+    </section>
+
+    <section>
+      <div class="startGame">
+        <button class="newGame"></button>
+      </div>
+    </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js" charset="utf-8"></script>
+    <script src="js/main.js" charset="utf-8"></script>
+  </body>
 </html>
