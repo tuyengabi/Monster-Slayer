@@ -59,9 +59,13 @@ Vue.component ('btn-restart', {
 // THE INSTANCE //
 new Vue ({
   el:'.game',
-  data: {
-    hpMonster: 100,
-    hpPlayer: 100
+  data: function() {
+    return {
+      hitPoint: {
+        monster: 100,
+        player: 100
+      }
+    }
   },
 
   methods: {

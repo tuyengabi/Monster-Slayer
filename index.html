@@ -8,8 +8,8 @@
   <body>
     <main class="game">
     <section class="competitor">
-      <monster></monster>
-      <player></player>
+      <monster :hpMonster="hitPoint.monster"></monster>
+      <player v-on:hpPlayer="hitPoint.player"></player>
     </section>
 
     <section class="btns">
