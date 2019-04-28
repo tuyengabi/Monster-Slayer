@@ -7,7 +7,7 @@ Vue.component ('monster', {
   template:
   `<div>
     <p>MONSTER</p>
-    <div class="lifeBar>
+    <div class="lifeBar">
       <p>{{ hpMonster }}</p>
     </div>
    </div>
@@ -54,8 +54,8 @@ Vue.component ('btn-special-attack', {
   props: [ 'hpMonster', 'hpPlayer' ],
   template: 
   `<button
-   v-on:click="monster-=_.random(10,20)"
-   v-on:click="player-=_.random(10,20)"
+   v-on:click="hpMonster-=_.random(10,20)"
+   v-on:click="hpPlayer-=_.random(10,20)"
    >
    SPECIAL ATTACK
    </button>`
@@ -70,14 +70,14 @@ Vue.component ('btn-heal', {
   props: [ 'hpMonster', 'hpPlayer' ],
   template: 
   `<button
-   v-on:click="player+=10"
+   v-on:click="hpPlayer+=10"
    >
    HEAL
    </button>`
 })
 
 
-// THE COMPONENT BTN-RESET //
+// THE COMPONENT BTN-RESTART //
 Vue.component ('btn-restart', {
   data: function() {
 
@@ -99,5 +99,35 @@ new Vue ({
   data: {
     hpMonster: 100,
     hpPlayer: 100
-  }
+  },
+
+  methods: {
+    attack: function() {
+      return {
+      hpMonster-=_.random(3,10), 
+      hpPlayer-=_.random(2,10)  
+      }
+    },
+
+    specialAttack: function() {
+      return {
+      hpMonster-=_.random(10,20), 
+      hpPlayer-=_.random(10,20)  
+      }
+    },
+
+    heal: function() {
+      return {
+      hpPlayer+=10
+      }
+    },
+
+    restart: function() {
+      return {
+      hpMonster=100,
+      hpPlayer=100
+      }
+    }
+
+  } 
 })
