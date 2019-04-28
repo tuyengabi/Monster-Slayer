@@ -1,8 +1,5 @@
 // THE COMPONENT MONSTER //
 Vue.component ('monster', {
-  data: function() {
-
-  },
   props: ['hpMonster'],
   template:
   `<div>
@@ -16,9 +13,6 @@ Vue.component ('monster', {
 
 // THE COMPONENT PLAYER //
 Vue.component ('player', {
-  data: function() {
-
-  },
   props: ['hpPlayer'],
   template:
   `<div>
@@ -32,9 +26,6 @@ Vue.component ('player', {
 
 // THE COMPONENT BTN-ATTACK //
 Vue.component ('btn-attack', {
-  data: function() {
-
-  },
   props: [ 'hpMonster', 'hpPlayer' ],
   template: 
   `<button v-on:click="$emit('btnAttack')">ATTACK</button>`
@@ -43,9 +34,6 @@ Vue.component ('btn-attack', {
 
 // THE COMPONENT BTN-SPECIAL-ATTACK //
 Vue.component ('btn-special-attack', {
-  data: function() {
-
-  },
   props: [ 'hpMonster', 'hpPlayer' ],
   template: 
   `<button v-on:click="$emit('btnSpecialAttack')">SPECIAL ATTACK</button>`
@@ -54,9 +42,6 @@ Vue.component ('btn-special-attack', {
 
 // THE COMPONENT BTN-HEAL //
 Vue.component ('btn-heal', {
-  data: function() {
-
-  },
   props: ['hpPlayer'],
   template: 
   `<button v-on:click="$emit('btnHeal')">HEAL</button>`
@@ -65,9 +50,6 @@ Vue.component ('btn-heal', {
 
 // THE COMPONENT BTN-RESTART //
 Vue.component ('btn-restart', {
-  data: function() {
-
-  },
   props: [ 'hpMonster', 'hpPlayer' ],
   template: 
   `<button v-on:click="$emit('btnRestart')">RESTART</button>`
@@ -76,7 +58,7 @@ Vue.component ('btn-restart', {
 
 // THE INSTANCE //
 new Vue ({
-  el:'game',
+  el:'.game',
   data: {
     hpMonster: 100,
     hpPlayer: 100
@@ -84,30 +66,22 @@ new Vue ({
 
   methods: {
     attack: function() {
-      return {
       hpMonster-=_.random(3,10); 
       hpPlayer-=_.random(2,10)  
-      }
     },
 
     specialAttack: function() {
-      return {
       hpMonster-=_.random(10,20); 
       hpPlayer-=_.random(10,20)  
-      }
     },
 
     heal: function() {
-      return {
       hpPlayer+=10
-      }
     },
 
     restart: function() {
-      return {
       hpMonster=100;
       hpPlayer=100
-      }
     }
 
   } 

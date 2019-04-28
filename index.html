@@ -7,22 +7,21 @@
   </head>
   <body>
     <main class="game">
-    <slayer></slayer>
     <section class="competitor">
       <monster></monster>
       <player></player>
     </section>
 
     <section class="btns">
-      <btn-attack></btn-attack>
-      <btn-special-attack></btn-special-attack>
-      <btn-heal></btn-heal>
-      <btn-restart></btn-restart>
+      <btn-attack v-on:btnAttack="attack"></btn-attack>
+      <btn-special-attack v-on:btnSpecialAttack="specialAttack"></btn-special-attack>
+      <btn-heal v-on:btnHeal="heal"></btn-heal>
+      <btn-restart v-on:btnRestart="restart"></btn-restart>
     </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js" charset="utf-8"></script>
-    <script src="js/main.js" charset="utf-8"></script>
+    <script src="js/index.js" charset="utf-8"></script>
   </body>
 </html>
