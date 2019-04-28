@@ -14,3 +14,14 @@
 
 **Des Commits**
 * First Commit , Add README.md
+* Add HTML , CSS , JS
+* Add image to README.md
+* Add contenu of file html
+* Add the components and instance
+* Add file index.js , divide the components
+* Add the functions in the methods of the instance
+* Modify index.html
+* Rename the components , add button Restart 
+* Fix the props , add v-bind
+* Rename the variables Hit Point
+* Fix the operators in the functions
