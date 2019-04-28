@@ -13,12 +13,12 @@ Vue.component ('monster', {
 
 // THE COMPONENT PLAYER //
 Vue.component ('player', {
-  props: ['hpPlayer'],
+  props: ['hpplayer'],
   template:
   `<div>
     <p>PLAYER</p>
     <div class="lifeBar">
-      <p>{{ hpPlayer }}</p>
+      <p>{{ hpplayer }}</p>
     </div>
    </div>`
 })
@@ -26,33 +26,33 @@ Vue.component ('player', {
 
 // THE COMPONENT BTN-ATTACK //
 Vue.component ('btn-attack', {
-  props: [ 'hpmonster', 'hpPlayer' ],
+  props: [ 'hpmonster', 'hpplayer' ],
   template: 
-  `<button v-on:click="$emit('btnAttack')">ATTACK</button>`
+  `<button v-on:click="$emit('btnatt')">ATTACK</button>`
 })
 
 
 // THE COMPONENT BTN-SPECIAL-ATTACK //
 Vue.component ('btn-special-attack', {
-  props: [ 'hpmonster', 'hpPlayer' ],
+  props: [ 'hpmonster', 'hpplayer' ],
   template: 
-  `<button v-on:click="$emit('btnSpecialAttack')">SPECIAL ATTACK</button>`
+  `<button v-on:click="$emit('btnspeatt')">SPECIAL ATTACK</button>`
 })
 
 
 // THE COMPONENT BTN-HEAL //
 Vue.component ('btn-heal', {
-  props: ['hpPlayer'],
+  props: ['hpplayer'],
   template: 
-  `<button v-on:click="$emit('btnHeal')">HEAL</button>`
+  `<button v-on:click="$emit('btnheal')">HEAL</button>`
 })
 
 
 // THE COMPONENT BTN-RESTART //
 Vue.component ('btn-restart', {
-  props: [ 'hpmonster', 'hpPlayer' ],
+  props: [ 'hpmonster', 'hpplayer' ],
   template: 
-  `<button v-on:click="$emit('btnRestart')">RESTART</button>`
+  `<button v-on:click="$emit('btnrestart')">RESTART</button>`
 })
 
 
@@ -70,22 +70,22 @@ new Vue ({
 
   methods: {
     attack: function() {
-      hpmonster-=_.random(3,10); 
-      hpPlayer-=_.random(2,10)  
+      this.monster-=_.random(3,10); 
+      this.player-=_.random(2,10)  
     },
 
     specialAttack: function() {
-      hpmonster-=_.random(10,20); 
-      hpPlayer-=_.random(10,20)  
+      this.monster-=_.random(10,20); 
+      this.player-=_.random(10,20)  
     },
 
     heal: function() {
-      hpPlayer+=10
+      this.player+=10
     },
 
     restart: function() {
-      hpmonster=100;
-      hpPlayer=100
+     this.monster=100;
+     this.player=100
     }
 
   } 

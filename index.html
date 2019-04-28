@@ -8,15 +8,15 @@
   <body>
     <main class="game">
     <section class="competitor">
-      <monster :hpMonster="hitPoint.monster"></monster>
-      <player v-on:hpPlayer="hitPoint.player"></player>
+      <monster :hpmonster="hitPoint.monster"></monster>
+      <player :hpplayer="hitPoint.player"></player>
     </section>
 
     <section class="btns">
-      <btn-attack v-on:btnAttack="attack"></btn-attack>
-      <btn-special-attack v-on:btnSpecialAttack="specialAttack"></btn-special-attack>
-      <btn-heal v-on:btnHeal="heal"></btn-heal>
-      <btn-restart v-on:btnRestart="restart"></btn-restart>
+      <btn-attack :hpplayer="hitPoint.player" :hpmonster="hitPoint.monster" v-on:btnatt="attack()"></btn-attack>
+      <btn-special-attack :hpplayer="hitPoint.player" :hpmonster="hitPoint.monster" v-on:btnspeatt="specialAttack"></btn-special-attack>
+      <btn-heal :hpplayer="hitPoint.player" v-on:btnheal="heal"></btn-heal>
+      <btn-restart :hpplayer="hitPoint.player" :hpmonster="hitPoint.monster" v-on:btnrestart="restart"></btn-restart>
     </section>
     </main>
 
