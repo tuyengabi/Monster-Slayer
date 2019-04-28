@@ -1,4 +1,4 @@
-# Monster-Slayer
+# Monster-Slayer (Vue Js)
 
 ![https://www.github.com/tuyengabi](./img/monster-slayer-02.png)
 
