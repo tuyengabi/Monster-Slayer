@@ -70,22 +70,22 @@ new Vue ({
 
   methods: {
     attack: function() {
-      this.monster-=_.random(3,10); 
-      this.player-=_.random(2,10)  
+      this.hitPoint.monster-=_.random(3,10); 
+      this.hitPoint.player-=_.random(2,12);  
     },
 
     specialAttack: function() {
-      this.monster-=_.random(10,20); 
-      this.player-=_.random(10,20)  
+      this.hitPoint.monster-=_.random(10,20); 
+      this.hitPoint.player-=_.random(10,20)  
     },
 
     heal: function() {
-      this.player+=10
+      this.hitPoint.player+=10
     },
 
     restart: function() {
-     this.monster=100;
-     this.player=100
+     this.hitPoint.monster=100;
+     this.hitPoint.player=100
     }
 
   } 
